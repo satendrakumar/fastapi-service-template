@@ -10,7 +10,13 @@ from src.util.logger import get_logger
 
 log = get_logger(__name__)
 
-app = FastAPI()
+
+
+app = FastAPI(
+    root_path="/v1/api",
+    title="FastAPI Service Template",
+    description="FastAPI Service Template",
+)
 
 app.include_router(payment_api_router)
 
